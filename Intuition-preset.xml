@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<binarytools version="v2.4.22">
+  <preset id="sF3s7-U8j5kIbH8jOL1Gi">
+    <properties>
+      <name>Intuition-preset</name>
+    </properties>
+    <layout id="52i7vmYaK3XXmEYU5Xgfs" key="layout-3">
+      <region id="kurWNIQgrnJ95zQCRfQI2">
+        <panel id="ImGdqscu7x5oD_R5ietu3" key="last-digits">
+          <settings>
+            <limit>25</limit>
+          </settings>
+          <properties>
+            <height>sm</height>
+          </properties>
+        </panel>
+      </region>
+      <region id="HTS0S_m-PncpkoeEoIuyq">
+        <panel id="qw2hfuweNIhUSVgkLcYeH" key="last-digits">
+          <settings>
+            <limit>50</limit>
+          </settings>
+          <properties>
+            <height>sm</height>
+          </properties>
+        </panel>
+      </region>
+      <region id="F5rSQqshKcd9M8sMIcdnk">
+        <panel id="kvYCYaKSIIsLPYywPXhLP" key="last-digits">
+          <settings>
+            <limit>100</limit>
+          </settings>
+          <properties>
+            <height>sm</height>
+          </properties>
+        </panel>
+      </region>
+      <region id="GJDI2eg4kWiha76NjEDFn">
+        <panel id="Needs-vzKfetZD08cMJwY" key="account"/>
+        <panel id="AF0c38JP2o8JrhhD0wYi-" key="worm">
+          <settings/>
+          <properties>
+            <height>sm</height>
+          </properties>
+        </panel>
+      </region>
+      <region id="OEU5t1OsEmaibOiYTPW1l">
+        <panel id="ZcNwxgvpug2VShgs2XbEY" key="summary-table"/>
+      </region>
+      <region id="_ZVjZihWdhgStT5oMf2w9">
+        <panel id="zfFbBu1G2PU4yKbEU-i-P" key="trade"/>
+        <panel id="94W4iUAI0gXy0lHAFdcXs" key="ads"/>
+      </region>
+    </layout>
+  </preset>
+</binarytools>

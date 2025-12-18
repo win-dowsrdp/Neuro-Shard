@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<binarytools version="v2.4.11">
+  <preset id="3l-7dC7nVOm-iWexj5mn5">
+    <properties>
+      <name>PRESET - OVER UNDER</name>
+    </properties>
+    <layout id="87H-M1FfVdXjTXFOjTuRi" key="layout-2">
+      <region id="_e2GoxVw638aNQm7JG1kJ">
+        <panel id="emqUkH2uo1sCGyL5Ic8t0" key="over-under">
+          <settings>
+            <limit>50</limit>
+            <over>2</over>
+            <under>7</under>
+          </settings>
+          <properties/>
+        </panel>
+        <panel id="u87USFt7rMbYsTvy3qcw4" key="over-under">
+          <settings>
+            <limit>100</limit>
+            <over>2</over>
+            <under>7</under>
+          </settings>
+          <properties/>
+        </panel>
+      </region>
+      <region id="Tgv3E-fQdPoU_WmH8Icwa">
+        <panel id="dpIWDwIXGtegKi-BeZcMo" key="last-digits">
+          <settings/>
+          <properties/>
+        </panel>
+        <panel id="x7FHnciy0_vZ6lXGmPGUM" key="last-digits">
+          <settings/>
+          <properties/>
+        </panel>
+        <panel id="summary-table" key="summary-table"/>
+      </region>
+      <region id="_9oOI3UhwAfrPVHUSsh36">
+        <panel id="trade" key="trade"/>
+        <panel id="account" key="account"/>
+      </region>
+      <region id="NPwXLumEm7mGLaxxXsi3q"/>
+      <region id="hCiak1fdjTtwBUCs3rHIa"/>
+      <region id="3UydbhpfObTXSBxMAh_UY">
+        <panel id="ads" key="ads"/>
+      </region>
+    </layout>
+  </preset>
+</binarytools>

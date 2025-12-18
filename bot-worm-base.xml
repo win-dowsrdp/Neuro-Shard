@@ -1,0 +1,112 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="pS!,WlQY3uv]V)|oG2cB">worm</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="0" y="0">
+    <field name="MARKET_LIST">synthetic_index</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_10</field>
+    <field name="TRADETYPECAT_LIST">callput</field>
+    <field name="TRADETYPE_LIST">risefall</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">FALSE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id="KOZmZvl-?}iS#KBT$7%y">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="0" y="403">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="variables_set" id="1{.qP.lFd6@ZP8OWSwJ/">
+        <field name="VAR" id="pS!,WlQY3uv]V)|oG2cB" variabletype="">worm</field>
+        <value name="VALUE">
+          <block type="worm" id="%4U%3vxbwXPE;H;T:Sv)" inline="true">
+            <value name="INPUT">
+              <block type="ticks" id="tdHY6cQ4Th])NYaH/YE?"></block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="45+IvNl#3}KTo8p.yU;W">
+                <field name="NUM">20</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="}~X}ml(Lo:Z~oQ#o*G*[">
+            <field name="NOTIFICATION_TYPE">warn</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="3Rk,SJ(6h/6wwdSaBhs!">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="worm_query" id="5^lG}01B]*CI]BmWQgv.">
+                <field name="WORM_QUERY_LIST">list</field>
+                <field name="WORM_VAR" id="pS!,WlQY3uv]V)|oG2cB" variabletype="">worm</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="9W7ArU?@#MRwgA#!2lKb">
+                <mutation elseif="1"></mutation>
+                <value name="IF0">
+                  <block type="worm_query" id="M(v#cOiLPk5*Vu!rdO?]">
+                    <field name="WORM_QUERY_LIST">supportBreaked</field>
+                    <field name="WORM_VAR" id="pS!,WlQY3uv]V)|oG2cB" variabletype="">worm</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="notify" id="TJLfF$%S=Y?x.6sS82.W">
+                    <field name="NOTIFICATION_TYPE">error</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="Yz(nXa|Ow^XU+AJzC|TO">
+                        <field name="TEXT">Support Breaked</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="worm_query" id="@}zj(+k}wg7sW]sJ0trD">
+                    <field name="WORM_QUERY_LIST">resistenceBreaked</field>
+                    <field name="WORM_VAR" id="pS!,WlQY3uv]V)|oG2cB" variabletype="">worm</field>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="notify" id="KsYhZsqN8Ktfa9iAe+8j">
+                    <field name="NOTIFICATION_TYPE">info</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="%.K=|t!xroqSEN(QO0|C">
+                        <field name="TEXT">Resistance Breaked</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id="D^Jz1^n=2vtZku1vBN@;" x="0" y="717">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="trade_again" id="c)S|KjoQdXc8l#J@5z3P"></block>
+    </statement>
+  </block>
+</xml>

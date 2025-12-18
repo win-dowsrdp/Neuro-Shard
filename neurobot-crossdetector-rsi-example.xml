@@ -1,0 +1,474 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="|t9lsd~EPneRHE%40Du:">smartRisk</variable>
+    <variable type="" id="=!Y4)B1D`!8Y%d$nFvBb">ticks</variable>
+    <variable type="" id="r{1;{NsHAj]@mU@.SCX8">rsi</variable>
+    <variable type="" id="$nz(0UN)c9etp~BL}GpP">overbought</variable>
+    <variable type="" id="}544TI[wCdPuOVfQBV$/">RSI - Period</variable>
+    <variable type="" id=":PW#J,.wu5@8]6F+4x;-">oversold</variable>
+    <variable type="" id="!/;d~cz(X@0cd/H0If}J">Overbought Level</variable>
+    <variable type="" id="]LXb.14}h|8Y7?J+%)TX">signal</variable>
+    <variable type="" id="6(Wm![{86kJ$~GYwAhhH">Oversold Level</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="-141" y="-479">
+    <field name="MARKET_LIST">synthetic_index</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_100</field>
+    <field name="TRADETYPECAT_LIST">callput</field>
+    <field name="TRADETYPE_LIST">risefall</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">FALSE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="INITIALIZATION">
+      <block type="variables_set" id="#~C~@{EvbA5e70E/vEM!">
+        <field name="VAR" id="|t9lsd~EPneRHE%40Du:" variabletype="">smartRisk</field>
+        <value name="VALUE">
+          <block type="smartrisk_settings" id="I(Z-E5i1CEGYR}?%j%N[">
+            <field name="STRATEGY">smart</field>
+            <value name="INVESTMENT">
+              <shadow type="math_number" id="/,O*84)co_{jcHBZT}Qr">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="TAKE_PROFIT">
+              <shadow type="math_number" id="1u=nnKl5?5Dx1e-Ifg`3">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <value name="STOP_LOSS">
+              <shadow type="math_number" id=")FQh#r{GmC7.1COU#q~S">
+                <field name="NUM">25</field>
+              </shadow>
+            </value>
+            <value name="PARAMETERS">
+              <block type="lists_create_with" id="W9W}DS:i`gOoG,DQ.qg.">
+                <mutation items="0"></mutation>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Zi+mOfg-MJ+H=A!M^hFu">
+            <field name="VAR" id="}544TI[wCdPuOVfQBV$/" variabletype="">RSI - Period</field>
+            <value name="VALUE">
+              <block type="math_number" id="G;FAB}A,${g3iUp^:V/n">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="LA2M8}2KDZRQ:CC2]r=+">
+                <field name="VAR" id="!/;d~cz(X@0cd/H0If}J" variabletype="">Overbought Level</field>
+                <value name="VALUE">
+                  <block type="math_number" id="r}n2Ub|%?rSz4~F]dD;W">
+                    <field name="NUM">70</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="/BdvFO+jC7D3CC2sr-N;">
+                    <field name="VAR" id="6(Wm![{86kJ$~GYwAhhH" variabletype="">Oversold Level</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="k9+!);u{Z~tx#|%3jTGb">
+                        <field name="NUM">30</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id="A=s6(jGk%9mFfJX1yL!C">
+                        <mutation name="reset"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id="s[j:}HOuChkxp!Ib:`ER">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="smartrisk_query" id="}YR9yp(VneEnh)*IOYik">
+            <field name="SMARTRISK_LIST">stake</field>
+            <field name="SMARTRISK_VAR">|t9lsd~EPneRHE%40Du:</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="S@@zTb!]}dJq`y_Clh:2" x="705" y="-439">
+    <field name="NAME">onTick</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="!)%Rp)6JRlyF^^h.1XGb">
+        <field name="VAR" id="r{1;{NsHAj]@mU@.SCX8" variabletype="">rsi</field>
+        <value name="VALUE">
+          <block type="rsi" id="cpVR~Et-LetKR!sj!_cf" inline="true">
+            <field name="OUTPUT">ARRAY</field>
+            <value name="INPUT">
+              <block type="variables_get" id="[q#?M;P.;7`=BB?^aJQ2">
+                <field name="VAR" id="=!Y4)B1D`!8Y%d$nFvBb" variabletype="">ticks</field>
+              </block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="z?uX]0!MepodC|}N]6nL">
+                <field name="NUM">3</field>
+              </shadow>
+              <block type="variables_get" id="1S2c(aYJR6zAs/ybty,=">
+                <field name="VAR" id="}544TI[wCdPuOVfQBV$/" variabletype="">RSI - Period</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="%*8LN:j)W#skyW3h};bC" x="708" y="-331">
+    <field name="NAME">lastRSI</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <block type="lists_getIndex" id="fL;XafBJ_`.KY*S{__Vb">
+        <mutation statement="false" at="false"></mutation>
+        <field name="MODE">GET</field>
+        <field name="WHERE">LAST</field>
+        <value name="VALUE">
+          <block type="variables_get" id="Vf?gK{DR88@UHz(29JfW">
+            <field name="VAR" id="r{1;{NsHAj]@mU@.SCX8" variabletype="">rsi</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="i?vc[Ejn|AXM/or?:Sd-" x="1300" y="-342">
+    <field name="NAME">strategy</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="nnZ|R6b]wV]%j=VKo5^y">
+        <field name="VAR" id="$nz(0UN)c9etp~BL}GpP" variabletype="">overbought</field>
+        <value name="VALUE">
+          <block type="cross_detector" id="b3GxBO.c4q(S(#}nmj`q">
+            <field name="CROSS_TYPE">0</field>
+            <value name="FIRST_SERIES">
+              <block type="variables_get" id="0I~)-x,PECnCEfjwu@`c">
+                <field name="VAR" id="r{1;{NsHAj]@mU@.SCX8" variabletype="">rsi</field>
+              </block>
+            </value>
+            <value name="SECOND_SERIES">
+              <block type="variables_get" id="Kb=2lJcnB]h/q2EqBJ__">
+                <field name="VAR" id="!/;d~cz(X@0cd/H0If}J" variabletype="">Overbought Level</field>
+              </block>
+            </value>
+            <value name="FIRST_SHIFT">
+              <shadow type="math_number" id="~GDUD[%Y^xO=wJ,m%0j,">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="SECOND_SHIFT">
+              <shadow type="math_number" id="AFlg=0!tOI5x||%Oyl#u">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="LOOKBACK">
+              <shadow type="math_number" id="BaV5TP5!r9(XQQcF%=Sd">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="d;,/TXt?B_/Su^h-WVP#">
+            <field name="VAR" id=":PW#J,.wu5@8]6F+4x;-" variabletype="">oversold</field>
+            <value name="VALUE">
+              <block type="cross_detector" id="9TeK[:l?lDVz245naLAR">
+                <field name="CROSS_TYPE">1</field>
+                <value name="FIRST_SERIES">
+                  <block type="variables_get" id="?lS1a,i,[Lor*k:;,t$}">
+                    <field name="VAR" id="r{1;{NsHAj]@mU@.SCX8" variabletype="">rsi</field>
+                  </block>
+                </value>
+                <value name="SECOND_SERIES">
+                  <block type="variables_get" id="Fv(,]7D2pn],k~#Zmp,(">
+                    <field name="VAR" id="6(Wm![{86kJ$~GYwAhhH" variabletype="">Oversold Level</field>
+                  </block>
+                </value>
+                <value name="FIRST_SHIFT">
+                  <shadow type="math_number" id="-}Bjxv8*cfOn+eth?vsy">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="SECOND_SHIFT">
+                  <shadow type="math_number" id="X*VIjti`X-.4$|xn+O:/">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="LOOKBACK">
+                  <shadow type="math_number" id="CEDz1u)x.R:bT^IOtUP9">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="izD/;B#1f:8XymvXb0#[">
+                <mutation elseif="1"></mutation>
+                <value name="IF0">
+                  <block type="variables_get" id="?t52#1m5Xu|~TK=-+^~)">
+                    <field name="VAR" id="$nz(0UN)c9etp~BL}GpP" variabletype="">overbought</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="notify" id="bRsT4!Tb]~~W}Zu4@?nj">
+                    <field name="NOTIFICATION_TYPE">info</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="[7Q}b7X*+ciIPf!d3yJ,">
+                        <field name="TEXT">Overbought</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="P)%zxN{^2C=O,:(CSWt^">
+                        <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                        <value name="VALUE">
+                          <block type="text" id="^SmzTqPz3V=S~VyOM$./">
+                            <field name="TEXT">FALL</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="variables_get" id="W.KsAmbmZg{}kB7)tgu`">
+                    <field name="VAR" id=":PW#J,.wu5@8]6F+4x;-" variabletype="">oversold</field>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="notify" id="?MIbHHWeh6sE=ZFz~Vgn">
+                    <field name="NOTIFICATION_TYPE">error</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id=".YVO,^USKU#4sazSS,8^">
+                        <field name="TEXT">Oversold</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="`|RHK0LB5`f3w7xyBp5V">
+                        <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                        <value name="VALUE">
+                          <block type="text" id="^#,R1P7x3#~To_-2hRYP">
+                            <field name="TEXT">RISE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="+g1%uM=t%3d[14CV~gIy" x="709" y="-210">
+    <field name="NAME">reset</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="c.qshWPW02G-t!R_2?~d">
+        <field name="VAR" id="$nz(0UN)c9etp~BL}GpP" variabletype="">overbought</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="f9URYGsu2FgEldF_V1m,">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="S8k?3ojWd*z_]j~Z@+^M">
+            <field name="VAR" id=":PW#J,.wu5@8]6F+4x;-" variabletype="">oversold</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="74Sdu}C;cia2aQ=EwdIT">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="E,bwi{+^4G+PBjR1$%:b">
+                <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                <value name="VALUE">
+                  <block type="text" id="rL@88eDzG0ywVf@ia:+q">
+                    <field name="TEXT">NONE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="-141" y="166">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="variables_set" id="y%/=Z=!ZSx%sDrW~J|I." collapsed="true">
+        <field name="VAR" id="=!Y4)B1D`!8Y%d$nFvBb" variabletype="">ticks</field>
+        <value name="VALUE">
+          <block type="ticks" id="!$WJZ$i{DOY0s*Zy#X[%"></block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="(!o*;$@`wp~RZQ+QXqlv">
+            <mutation name="onTick"></mutation>
+            <next>
+              <block type="procedures_callnoreturn" id="7[o=[5gqIi__cPI`uddW">
+                <mutation name="strategy"></mutation>
+                <next>
+                  <block type="notify" id="sMPid5V,?9}1w1Q/rW`#">
+                    <field name="NOTIFICATION_TYPE">success</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="^6=_axKj^;~R#b/[j3+P">
+                        <field name="TEXT">Waiting </field>
+                      </shadow>
+                      <block type="lists_split" id="])Ul:g_cm5F24V9|E}_L">
+                        <mutation mode="JOIN"></mutation>
+                        <field name="MODE">JOIN</field>
+                        <value name="INPUT">
+                          <block type="lists_create_with" id="aX^KMO`#^!K#-AJzek6;">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="procedures_callreturn" id="_Oh45v=O`oOw}|pR|ihd">
+                                <mutation name="lastRSI"></mutation>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="variables_get" id="-@rv6*}Msp-$T#bPa^)N">
+                                <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="DELIM">
+                          <shadow type="text" id="%S$V_~^7kqKT2BTDqT+s">
+                            <field name="TEXT"> - </field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="Zg)10j0wwvZWfX3i$+=4">
+                        <mutation elseif="1" else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="*g`6UEoofB3Kex4I?)Wx">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="Jnkv.i;6%Ra;B3c]d2Fo">
+                                <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="41F9=Cgh6;jS:}Goyx@z">
+                                <field name="TEXT">RISE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="purchase" id="W6q#Z-I3q3d[d3-`S[dS">
+                            <field name="PURCHASE_LIST">CALL</field>
+                          </block>
+                        </statement>
+                        <value name="IF1">
+                          <block type="logic_compare" id="LiM}l^2psb/3[CsuG*Lv">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="N=F`MaZ^p$o4A%tbPpf(">
+                                <field name="VAR" id="]LXb.14}h|8Y7?J+%)TX" variabletype="">signal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="H2On3f[UNU%kYf5%#0X*">
+                                <field name="TEXT">FALL</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="purchase" id="WD{lifxl%[gbq4rt+Gj[">
+                            <field name="PURCHASE_LIST">PUT</field>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="notify" id="oqzjL3r(W=}8;hSnEZ9H">
+                            <field name="NOTIFICATION_TYPE">success</field>
+                            <field name="NOTIFICATION_SOUND">silent</field>
+                            <value name="MESSAGE">
+                              <shadow type="text" id="7amnVF5p@fcf?CjO+i.*">
+                                <field name="TEXT">Waiting </field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="during_purchase" id="{,55qVM5{[|Nwp.O+.zZ" x="1033" y="320">
+    <statement name="DURING_PURCHASE_STACK">
+      <block type="notify" id="1lsKOzLxr7~=rDvFROR?">
+        <field name="NOTIFICATION_TYPE">warn</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="JaZ#UK^EC+9VV(8o,3UG">
+            <field name="TEXT">Overbought</field>
+          </shadow>
+          <block type="sell_price" id=",*dR6gX9}[GJ*~;D6;6|"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id="D^Jz1^n=2vtZku1vBN@;" x="650" y="447">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="smartrisk_result" id="KA!T,!MQWwGlcpYOQ^rW">
+        <field name="SMARTRISK_VAR">|t9lsd~EPneRHE%40Du:</field>
+        <value name="SMARTRISKFIELD_TOLERANCE">
+          <shadow type="math_number" id="1.o:+2TMUvIPQgQjXYU:">
+            <field name="NUM">0.1</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="=KXwPAq)~;{tc.CPTH(@">
+            <mutation name="reset"></mutation>
+            <next>
+              <block type="controls_if" id="Gg+ufR6$[,}$@Gxs,dzs">
+                <value name="IF0">
+                  <block type="smartrisk_query" id="+zeCVV!#:7B7WCH^Jrqe">
+                    <field name="SMARTRISK_LIST">continueTrade</field>
+                    <field name="SMARTRISK_VAR">|t9lsd~EPneRHE%40Du:</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="trade_again" id="c)S|KjoQdXc8l#J@5z3P"></block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<binarytools version="v2.4.21">
+  <preset id="6Jud20C2a7fT1JplbQEpi">
+    <properties>
+      <name>Even odd preset</name>
+    </properties>
+    <layout id="MB6aaxummpYsqoIaxtTHp" key="layout-3">
+      <region id="ySZRUoHYJTNLNlTqDCNk4"/>
+      <region id="A7oGAEcvutCF2o-Y1lTnj"/>
+      <region id="kbmR7rp0nnMjtsyL_FWI-"/>
+      <region id="7lwVsqK4hi1qEMDqLQRe5">
+        <panel id="pccYON3PW68ZyOxpM6Zva" key="worm">
+          <settings/>
+          <properties>
+            <height>sm</height>
+          </properties>
+        </panel>
+        <panel id="account" key="account"/>
+        <panel id="history" key="history"/>
+      </region>
+      <region id="e-375-X31MKoPnRbG0wsQ">
+        <panel id="summary-table" key="summary-table"/>
+      </region>
+      <region id="kByLzIeKSRtyQcDCV-udh">
+        <panel id="trade" key="trade"/>
+        <panel id="ads" key="ads"/>
+      </region>
+    </layout>
+  </preset>
+</binarytools>

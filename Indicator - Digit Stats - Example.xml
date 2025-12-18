@@ -1,0 +1,163 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="HvU-#uYZbI4[LWX)L9kg">stats</variable>
+    <variable type="" id="W`#j2p]C8M[ynvM~5gyD">lessFrequent</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="0" y="0">
+    <field name="MARKET_LIST">synthetic_index</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_100</field>
+    <field name="TRADETYPECAT_LIST">callput</field>
+    <field name="TRADETYPE_LIST">risefall</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">FALSE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id="+uBW[259P/GldN/ytxn6">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="-189" y="428">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="variables_set" id="O2,YC%IK6-cZP7/iBzF4">
+        <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+        <value name="VALUE">
+          <block type="digit_stats" id="BgA+O+Zl}-RkT@31kG:m" inline="true">
+            <value name="INPUT">
+              <block type="lastDigitList" id="6[z)4;:L6:P@;B.(][4w"></block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="R![6Qd,mP~Ugs([_JSt}">
+                <field name="NUM">25</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="`.`Zu=bzKS)uJlTpHl@d">
+            <field name="VAR" id="W`#j2p]C8M[ynvM~5gyD" variabletype="">lessFrequent</field>
+            <value name="VALUE">
+              <block type="digitstats_query" id="a*MPU+Zs|nTHdZ]Y8g$T" inline="true">
+                <field name="DIGITSTATS_QUERY_LIST">mostfrequent</field>
+                <value name="INSTANCE">
+                  <block type="variables_get" id="?jb4^U)yafTkCx+m4Fpv">
+                    <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+                  </block>
+                </value>
+                <value name="PARAMETERS">
+                  <block type="lists_create_with" id="^V_P)seoy}^MonIjx-/2">
+                    <mutation items="0"></mutation>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="K%yx9KV%dg-Ay~A#nSd]">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="v$16;ZY-8fGt/w%njOpO">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="lists_create_with" id="D;U+1B33eC-)1gC70@%+">
+                    <mutation items="5"></mutation>
+                    <value name="ADD0">
+                      <block type="variables_get" id="CUj4sXg7!XfMcAxPOI1z">
+                        <field name="VAR" id="W`#j2p]C8M[ynvM~5gyD" variabletype="">lessFrequent</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="digitstats_query" id="4C/hK+;IN?ul{XMt$EsH" inline="true">
+                        <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                        <value name="INSTANCE">
+                          <block type="variables_get" id="U}!jOhXGlX-6w9ZWn-s/">
+                            <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+                          </block>
+                        </value>
+                        <value name="PARAMETERS">
+                          <block type="lists_create_with" id="Rw=PVS~HM.u??4,:dSbL">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="variables_get" id="Ve)AqGKS.Lcm[s5NG8ZZ">
+                                <field name="VAR" id="W`#j2p]C8M[ynvM~5gyD" variabletype="">lessFrequent</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="digitstats_query" id=",6h5mT5keH.Cg=2}!/vl" inline="true">
+                        <field name="DIGITSTATS_QUERY_LIST">countDigit</field>
+                        <value name="INSTANCE">
+                          <block type="variables_get" id="Dvy7Vmw9Hf,_C0ZW/g[6">
+                            <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+                          </block>
+                        </value>
+                        <value name="PARAMETERS">
+                          <block type="lists_create_with" id="6*P/2|U(9iRzfPP(Lig|">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="variables_get" id="?Dm*0;CGvV0Yz^bqhj5-">
+                                <field name="VAR" id="W`#j2p]C8M[ynvM~5gyD" variabletype="">lessFrequent</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="digitstats_query" id="kF~FOXohZ)AvSTbg3f5O" inline="true">
+                        <field name="DIGITSTATS_QUERY_LIST">evenPercentage</field>
+                        <value name="INSTANCE">
+                          <block type="variables_get" id="XMsH(Dzut,BD;Mq_$j8G">
+                            <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+                          </block>
+                        </value>
+                        <value name="PARAMETERS">
+                          <block type="lists_create_with" id=")Uf(;(XgF4!lyypY~V16">
+                            <mutation items="0"></mutation>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="digitstats_query" id="jDeLJa$vCZOtR4n8JZu[" inline="true">
+                        <field name="DIGITSTATS_QUERY_LIST">oddPercentage</field>
+                        <value name="INSTANCE">
+                          <block type="variables_get" id="Rj:z8/W((nh}hwG,W9QU">
+                            <field name="VAR" id="HvU-#uYZbI4[LWX)L9kg" variabletype="">stats</field>
+                          </block>
+                        </value>
+                        <value name="PARAMETERS">
+                          <block type="lists_create_with" id="_jV:eSnED{vJO!?$]m4t">
+                            <mutation items="0"></mutation>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,563 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="[~2N!GcvSnV]ZhY[H6JM">INFO</variable>
+    <variable type="" id="HTP]uKm/%ccRC0)SxAb#">#0</variable>
+    <variable type="" id="TT@`sm%.f_U_e-;~(h16">periods</variable>
+    <variable type="" id="m9L!c@m.t=@NL4pGn.Vz">#1</variable>
+    <variable type="" id="Z](-Q%aW3PKlYI`a/Ivy">LessFrequent</variable>
+    <variable type="" id=":56BJ}+:JJfe^A0u,56E">smartRisk</variable>
+    <variable type="" id="2;yQ-vY1;YEhST+f-%/A">MostFrequent</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="171" y="-97">
+    <field name="MARKET_LIST">synthetic_index</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_100</field>
+    <field name="TRADETYPECAT_LIST">digits</field>
+    <field name="TRADETYPE_LIST">overunder</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">TRUE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="INITIALIZATION">
+      <block type="variables_set" id="WTI:rT#`/l3ozW5+1r=5">
+        <field name="VAR" id="[~2N!GcvSnV]ZhY[H6JM" variabletype="">INFO</field>
+        <value name="VALUE">
+          <block type="text_join" id=";5u:P?;s97]Ej/YY~i2v">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="(2lj1JQ0@P)X!oZL!W?Q">
+                <field name="TEXT">STRONG WHIP</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="u_NTzIT%r=OWvzfuPYEp">
+                <field name="TEXT">https://t.me/UnknownUserPro</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="`qD/@OXLFAz/=dv6Fl+[">
+            <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+            <value name="VALUE">
+              <block type="math_number" id="{+.nEw/8C.9p~gMhNd$C">
+                <field name="NUM">25</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="3ZsjCHJysFKyg95G_a0|">
+                <field name="VAR" id=":56BJ}+:JJfe^A0u,56E" variabletype="">smartRisk</field>
+                <value name="VALUE">
+                  <block type="smartrisk_settings" id="l!w3%q`n8!iRbfzQ[9rx">
+                    <field name="STRATEGY">martingale</field>
+                    <value name="INVESTMENT">
+                      <shadow type="math_number" id="SL=,N_u1_gBjNUT.f.My">
+                        <field name="NUM">0.7</field>
+                      </shadow>
+                    </value>
+                    <value name="TAKE_PROFIT">
+                      <shadow type="math_number" id="O@IUsMCZmleKV4b|$yBu">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                    <value name="STOP_LOSS">
+                      <shadow type="math_number" id="pF#8?!zB/5wI9MKWyb|1">
+                        <field name="NUM">300</field>
+                      </shadow>
+                    </value>
+                    <value name="PARAMETERS">
+                      <block type="smartrisk_martingale" id="a$B;6*VR@hZnSax)Su.y">
+                        <field name="MARTINGALE_RESETMAXLEVEL">TRUE</field>
+                        <value name="COMPOUND_LEVEL">
+                          <shadow type="math_number" id="R}FwNf[P!$W.p%X?xO)_">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_FACTOR">
+                          <shadow type="math_number" id="5A+%gi^EG0;b?O(`z7{]">
+                            <field name="NUM">8</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_START">
+                          <shadow type="math_number" id="@aTw.sSav3(lQ@~4EWu^">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_SPLIT">
+                          <shadow type="math_number" id="{nQ$S}*)7qjx6Xf8nBwG">
+                            <field name="NUM">2</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_MAXLEVEL">
+                          <shadow type="math_number" id="A:YnEU,/RaLy;MrO_mD.">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id="{1yv7b13lh-nX04[cgs1">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="smartrisk_query" id=";{wbd0iKD0YhstOAwnw!">
+            <field name="SMARTRISK_LIST">stake</field>
+            <field name="SMARTRISK_VAR">:56BJ}+:JJfe^A0u,56E</field>
+          </block>
+        </value>
+        <value name="PREDICTION">
+          <shadow type="math_number" id="2GbB0u=wt,gq!8J0?HUa">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="tick_analysis" id="D^|ZUX}Beg4y_jn+rwV5" x="1283" y="-89">
+    <statement name="TICKANALYSIS_STACK">
+      <block type="notify" id="/^D]c^at|~.S?Hg:5K?6">
+        <field name="NOTIFICATION_TYPE">info</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="+(.V(t`z77%wf,XYQLO}">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text_join" id="n.N+j+kr{q*p~]DtaLb9">
+            <mutation items="5"></mutation>
+            <value name="ADD0">
+              <block type="text" id="UE]RW##!oZ_aAv)%ZM_Z">
+                <field name="TEXT">#0 = </field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="digitstats_query" id="oE|#5BGc5}~e:jj^~*i3">
+                <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                <value name="INSTANCE">
+                  <block type="digit_stats" id="[lW.P.tjm*#*y:G0T`kw" inline="true">
+                    <value name="INPUT">
+                      <block type="lastDigitList" id="mq(p/BC.w$b{cM,%p)O6"></block>
+                    </value>
+                    <value name="PERIOD">
+                      <shadow type="math_number" id="ogX0%Kl|cJ^1}(AyQUNQ">
+                        <field name="NUM">25</field>
+                      </shadow>
+                      <block type="variables_get" id="S~oMA_W0bZ*K+%%KK#La">
+                        <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PARAMETERS">
+                  <block type="lists_create_with" id="+DEV-UI$OFe`imv]!tGx">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="math_number" id="Trk7/Q#KDK?^2~rX)Dm_">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="g.5aaQ%PhP2d{|b/QQkk">
+                <field name="TEXT"> % || #1 = </field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="digitstats_query" id="nWe=!n7JJ.Are+QxS@3.">
+                <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                <value name="INSTANCE">
+                  <block type="digit_stats" id="CdyKVB+I2_k=m_E6TBz}" inline="true">
+                    <value name="INPUT">
+                      <block type="lastDigitList" id="3XoEYa),ylAp!7k0,`tu"></block>
+                    </value>
+                    <value name="PERIOD">
+                      <shadow type="math_number" id="HE}bjjK2)SQwv_kmnR|A">
+                        <field name="NUM">25</field>
+                      </shadow>
+                      <block type="variables_get" id="{*OrQJufk=z3.Rbtl#Ab">
+                        <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PARAMETERS">
+                  <block type="lists_create_with" id="oM=$R}=Lbb.(pZ:q;e.L">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="math_number" id="qD*cB`Qf;q2+cH*P~0tT">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="text" id="At~(K+R9GFreUC7jWE*x">
+                <field name="TEXT"> %</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="c@kAb@zpN4(SOxd0)geL">
+            <field name="VAR" id="Z](-Q%aW3PKlYI`a/Ivy" variabletype="">LessFrequent</field>
+            <value name="VALUE">
+              <block type="digitstats_query" id="W`k3!7#[Q/pMMXS_.F0N">
+                <field name="DIGITSTATS_QUERY_LIST">lessFrequent</field>
+                <value name="INSTANCE">
+                  <block type="digit_stats" id="3eBTwIK.7WW]3/lHZGsL" inline="true">
+                    <value name="INPUT">
+                      <block type="lastDigitList" id="}.T.t?yjE[o87!TzkMq?"></block>
+                    </value>
+                    <value name="PERIOD">
+                      <shadow type="math_number" id="X=OGngguAh:/-yc!mqLN">
+                        <field name="NUM">25</field>
+                      </shadow>
+                      <block type="variables_get" id="s0Iy@asCna}4ucd!qK[Q">
+                        <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PARAMETERS">
+                  <block type="lists_create_with" id="4m$%F3x1!B2FRc;XbNiA">
+                    <mutation items="0"></mutation>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="Rs4~Qk~B|{Mo*`iS[9OE">
+                <field name="VAR" id="2;yQ-vY1;YEhST+f-%/A" variabletype="">MostFrequent</field>
+                <value name="VALUE">
+                  <block type="digitstats_query" id="gU0dyBRJ9)Ds/_Dd382`">
+                    <field name="DIGITSTATS_QUERY_LIST">mostfrequent</field>
+                    <value name="INSTANCE">
+                      <block type="digit_stats" id="{e{^I$e^w,%C-:+OK(|K" inline="true">
+                        <value name="INPUT">
+                          <block type="lastDigitList" id="917{?JMRiHMuipDTh61K"></block>
+                        </value>
+                        <value name="PERIOD">
+                          <shadow type="math_number" id="9[7_k!sepqGXZ-CB[P,S">
+                            <field name="NUM">25</field>
+                          </shadow>
+                          <block type="variables_get" id="e.O$zEec/(k;{#Vs,?_c">
+                            <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="PARAMETERS">
+                      <block type="lists_create_with" id="*U!mgh@jqfcJU{seb3~=">
+                        <mutation items="0"></mutation>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="notify" id="Z*6Oa7BrZ{A,JW9%[|Ny">
+                    <field name="NOTIFICATION_TYPE">warn</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="+(.V(t`z77%wf,XYQLO}">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text_join" id="msqiC^vnCI]l)GeCOo0a">
+                        <mutation items="9"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="F;kv5A=RE#QgX5CC[?_R">
+                            <field name="TEXT">Less Frequent = #</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="VF*UlOh3kEaXTszY2RG]">
+                            <field name="VAR" id="Z](-Q%aW3PKlYI`a/Ivy" variabletype="">LessFrequent</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="]%HlLTX=EE*BB^fnEtYH">
+                            <field name="TEXT"> = </field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="digitstats_query" id="r!?`p?%]krWA]BYUhG0q">
+                            <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                            <value name="INSTANCE">
+                              <block type="digit_stats" id="l|Z^A:vOp$i0$DERPT4i" inline="true">
+                                <value name="INPUT">
+                                  <block type="lastDigitList" id="P:FYx3Ly`jbt|fN82SAn"></block>
+                                </value>
+                                <value name="PERIOD">
+                                  <shadow type="math_number" id="u7mu;I+.V~s+7|-0}8;q">
+                                    <field name="NUM">25</field>
+                                  </shadow>
+                                  <block type="variables_get" id="EN,D*GVDR]sGxt;)zQxj">
+                                    <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="PARAMETERS">
+                              <block type="lists_create_with" id="$+2#E`5yrP.))C6_FP9$">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="JO;vOt!8u4/whF}:r|uw">
+                                    <field name="VAR" id="Z](-Q%aW3PKlYI`a/Ivy" variabletype="">LessFrequent</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="text" id="I%CUi$6I)pd3gOpD`(aQ">
+                            <field name="TEXT">% || Most Frequent = #</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="variables_get" id="O4(GAxRD-8M42x6N%}mp">
+                            <field name="VAR" id="2;yQ-vY1;YEhST+f-%/A" variabletype="">MostFrequent</field>
+                          </block>
+                        </value>
+                        <value name="ADD6">
+                          <block type="text" id="cfi+97pah1q[K7^5`d35">
+                            <field name="TEXT"> = </field>
+                          </block>
+                        </value>
+                        <value name="ADD7">
+                          <block type="digitstats_query" id="QS4vU$LB/Qj4j+ZWVG^7">
+                            <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                            <value name="INSTANCE">
+                              <block type="digit_stats" id="A~%Y[#^Z;)K+wq@$}265" inline="true">
+                                <value name="INPUT">
+                                  <block type="lastDigitList" id="rg$x4{Te-]XUrE{YiZrs"></block>
+                                </value>
+                                <value name="PERIOD">
+                                  <shadow type="math_number" id="Bo55L=zV^TYxRYREk`$w">
+                                    <field name="NUM">25</field>
+                                  </shadow>
+                                  <block type="variables_get" id="hs/Cw~yK4AS(_Q*J=33D">
+                                    <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="PARAMETERS">
+                              <block type="lists_create_with" id="?4|}86^FhGTdF6@%Z(!_">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="3%,F+a(b8?cMF()Zvf{R">
+                                    <field name="VAR" id="2;yQ-vY1;YEhST+f-%/A" variabletype="">MostFrequent</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD8">
+                          <block type="text" id="XZ/.%bd24FHrAAr-*0aV">
+                            <field name="TEXT">%</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id="D^Jz1^n=2vtZku1vBN@;" collapsed="true" x="804" y="297">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="controls_if" id="+*C/py0O~7Hft4amS5e_">
+        <value name="IF0">
+          <block type="main_account" id="sUjMgOe%daEOR!HJ!~*V"></block>
+        </value>
+        <statement name="DO0">
+          <block type="smartrisk_result" id="=Y^^B$(*~%y^pEWz{TKd">
+            <field name="SMARTRISK_VAR">:56BJ}+:JJfe^A0u,56E</field>
+            <value name="SMARTRISKFIELD_TOLERANCE">
+              <shadow type="math_number" id="ncCl5}K$?tUuCh[pq~zA">
+                <field name="NUM">0.1</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="zR_|pFnCHS4Up}]N934S">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="smartrisk_query" id="[[erSBRWOH6vJRg8vpGB">
+                <field name="SMARTRISK_LIST">continueTrade</field>
+                <field name="SMARTRISK_VAR">:56BJ}+:JJfe^A0u,56E</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="trade_again" id="c)S|KjoQdXc8l#J@5z3P"></block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="1,=}#7}E.o:2}0=+4eKa">
+                <value name="TEXT">
+                  <shadow type="text" id="x%sXq%*Gn^l3vt189*Ow">
+                    <field name="TEXT">Bot Stopped</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="170" y="709">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="variables_set" id="qdkoG1?H@o@UCVm4_d$-">
+        <field name="VAR" id="HTP]uKm/%ccRC0)SxAb#" variabletype="">#0</field>
+        <value name="VALUE">
+          <block type="digitstats_query" id=":uhJv|:z=/vZ#@+jC?Ln">
+            <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+            <value name="INSTANCE">
+              <block type="digit_stats" id="=.f.IvQ2##%(c0S;wW.|" inline="true">
+                <value name="INPUT">
+                  <block type="lastDigitList" id="gH}(8Dd?Z6$y~SDM?{0e"></block>
+                </value>
+                <value name="PERIOD">
+                  <shadow type="math_number" id="ogX0%Kl|cJ^1}(AyQUNQ">
+                    <field name="NUM">25</field>
+                  </shadow>
+                  <block type="variables_get" id="tV]l|u]L%5p,TA_]ya#N">
+                    <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="PARAMETERS">
+              <block type="lists_create_with" id="1461EEyPM,,4woLqL%9)">
+                <mutation items="1"></mutation>
+                <value name="ADD0">
+                  <block type="math_number" id="y~3m-`pphHAa#l]3}O:v">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Swb@$_^(r;waCEc|9~x{">
+            <field name="VAR" id="m9L!c@m.t=@NL4pGn.Vz" variabletype="">#1</field>
+            <value name="VALUE">
+              <block type="digitstats_query" id="tw8LG12r79p8C1MF1=YF">
+                <field name="DIGITSTATS_QUERY_LIST">digitPercentage</field>
+                <value name="INSTANCE">
+                  <block type="digit_stats" id="I}(wwqL+AWiNatAO(S4B" inline="true">
+                    <value name="INPUT">
+                      <block type="lastDigitList" id=",(;rv8gK/W7mYi~j.X*F"></block>
+                    </value>
+                    <value name="PERIOD">
+                      <shadow type="math_number" id="ogX0%Kl|cJ^1}(AyQUNQ">
+                        <field name="NUM">25</field>
+                      </shadow>
+                      <block type="variables_get" id="=9GXgUbc~l|Di*Qr#$l8">
+                        <field name="VAR" id="TT@`sm%.f_U_e-;~(h16" variabletype="">periods</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PARAMETERS">
+                  <block type="lists_create_with" id="o:avTu_j6Wu5M19C=xS2">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="math_number" id="UHLbZgAS-Ga:BJ,CgBbh">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="poX6Z{//if(QA#wQ4LrG">
+                <value name="IF0">
+                  <block type="logic_operation" id="DQs):+fBBOpp={|,TcDB" inline="false">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="W~_Zi}*NNcSGvuXs%1I4">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="#t~k_o@L-J^VAG])~oFT">
+                            <field name="VAR" id="HTP]uKm/%ccRC0)SxAb#" variabletype="">#0</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="brM5+)o@Nb)Px]b/mckI">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="7R6}U5%n.5G3z7)+1$sO">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="!-~s[@#a*ud?3#NaYl3D">
+                            <field name="VAR" id="m9L!c@m.t=@NL4pGn.Vz" variabletype="">#1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="Q8{T|(bCJxqH^lS27#es">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="notify" id="iQeYLgZ5XodFh5#GzFeL">
+                    <field name="NOTIFICATION_TYPE">success</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="FR@MxAkc!o%379pnit];">
+                        <field name="TEXT">GO!</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="purchase" id="W6q#Z-I3q3d[d3-`S[dS">
+                        <field name="PURCHASE_LIST">DIGITOVER</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
