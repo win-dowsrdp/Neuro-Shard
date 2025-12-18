@@ -1,0 +1,1061 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="?Wu~|-n04FYd@s90T-(.">@lasaidhari (BCIWL) ticks list</variable>
+    <variable type="" id="eGXi,GJPe5N,Ri_kDh/H">@lasaidhari (BCIWL) number of worm color lists</variable>
+    <variable type="" id="++|c3BaHq?OUvlZV6Azb">@lasaidhari (BCIWL) periode</variable>
+    <variable type="" id="7zSxHcaXA~0!.@y,:s`;">Number of blue worm Head</variable>
+    <variable type="" id="Vm7W~xGfDen)53h^wmao">Moving</variable>
+    <variable type="" id="UxlP+ljK9q$OmwzMkfTq">(BCIWL)▼▲</variable>
+    <variable type="" id="-96|(TRiob2n}hNjaiSg">@lasaidhari (BCIWL) worm color</variable>
+    <variable type="" id="2gnrU:9Yj*vRD?R.p(2W">Worm Pattern</variable>
+    <variable type="" id="?aJ!3UMhJibEQ^56qxO|">wormHead</variable>
+    <variable type="" id="rE`16L#qddwBm.vYCV2)">WORM</variable>
+    <variable type="" id="+M}Q08TlZmDUu]!FUn:^">(BCIWL)▲</variable>
+    <variable type="" id=":GH^!qG.?`smv-L90@L7">(BCIWL)▼</variable>
+    <variable type="" id="o?HNaQ1gA`O2=b7aOumB">@lasaidhari (BCIWL) count worm color</variable>
+    <variable type="" id="Sao-/Yb2=_1LT-._#,24">(BCIWL)⇗⇘</variable>
+    <variable type="" id="F:/pHbZ`OV|?dly2(@~0">111</variable>
+    <variable type="" id=":C95_Wl.:5(Y3uqWj.F9">@lasaidhari (BCIWL)</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="0" y="0">
+    <field name="MARKET_LIST">synthetic_index</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_100</field>
+    <field name="TRADETYPECAT_LIST">touchnotouch</field>
+    <field name="TRADETYPE_LIST">touchnotouch</field>
+    <field name="TYPE_LIST">ONETOUCH</field>
+    <field name="CANDLEINTERVAL_LIST">120</field>
+    <field name="TIME_MACHINE_ENABLED">TRUE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="INITIALIZATION">
+      <block type="variables_set" id="w?1@ZijL{_j^m|*kF;BF">
+        <field name="VAR" id="7zSxHcaXA~0!.@y,:s`;" variabletype="">Number of blue worm Head</field>
+        <value name="VALUE">
+          <block type="math_number" id="vgtjVe2ba9H[rSWQ`EC)">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="84[{a~A+%0M85.q9ou2]">
+            <field name="VAR" id="2gnrU:9Yj*vRD?R.p(2W" variabletype="">Worm Pattern</field>
+            <value name="VALUE">
+              <block type="text" id="$as=p[/DGrGhz1,WM{XH">
+                <field name="TEXT">blue,blue,blue</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="/fKHL:D(]9|)H.0Hz!(K">
+                <field name="VAR" id="rE`16L#qddwBm.vYCV2)" variabletype="">WORM</field>
+                <value name="VALUE">
+                  <block type="smartrisk_settings" id="8YBBK#z}xa29xf^OM=:_">
+                    <field name="STRATEGY">martingale</field>
+                    <value name="INVESTMENT">
+                      <shadow type="math_number" id="OS))ZyQ+)hxh7QfM]6vM">
+                        <field name="NUM">0.35</field>
+                      </shadow>
+                    </value>
+                    <value name="TAKE_PROFIT">
+                      <shadow type="math_number" id="WA%1+3N|WSMptzUksr*w">
+                        <field name="NUM">20</field>
+                      </shadow>
+                    </value>
+                    <value name="STOP_LOSS">
+                      <shadow type="math_number" id="j76nwy7meD6caVWTO.5u">
+                        <field name="NUM">20</field>
+                      </shadow>
+                    </value>
+                    <value name="PARAMETERS">
+                      <block type="smartrisk_martingale" id="NzZFioV%9f#VS_pqt{^#">
+                        <field name="MARTINGALE_RESETMAXLEVEL">TRUE</field>
+                        <value name="COMPOUND_LEVEL">
+                          <shadow type="math_number" id="lF_^_u=v5:4P4Ll0G+PK">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_FACTOR">
+                          <shadow type="math_number" id="4pi-+N_@%ULyZ!!#v$NF">
+                            <field name="NUM">2.8</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_START">
+                          <shadow type="math_number" id="g^eGQN;A0M!KI5wD.2@u">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_SPLIT">
+                          <shadow type="math_number" id="SuSj0;H)|:e}|,wIFi/t">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <value name="MARTINGALE_MAXLEVEL">
+                          <shadow type="math_number" id="i]C0[Tv:WpH=us~zt@b?">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="virtualhook" id="JO+#^bDpfu@Ia=KH1rfa" inline="false">
+                    <field name="VH_STARTWHEN_LIST">loss</field>
+                    <field name="VH_STATE_LIST">enabled</field>
+                    <value name="VH_TRIGGER">
+                      <shadow type="math_number" id="tTAh$z6YAI#jXIE.SSI}">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                    <value name="VH_STAKE">
+                      <shadow type="math_number" id="v,,YSN0WWi(N~Ry]D|pR">
+                        <field name="NUM">0.5</field>
+                      </shadow>
+                    </value>
+                    <value name="VH_MAX_NEGATIVE_STREAK">
+                      <shadow type="math_number" id="fZ#28)Zz2.8|XTC^Dw1$">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="VH_TOLERANCE">
+                      <shadow type="math_number" id="2SQ33X!XGXjaC?]Yc?bc">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <value name="VH_MAX_POSITIVE_STREAK">
+                      <shadow type="math_number" id="x]!8,szCgI~B,/U-kPOH">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="VH_MAX_TRADES">
+                      <shadow type="math_number" id="52%p2j[j[%k%fwI^;sLM">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="notify" id="uw@oh-~3h(h:%{7DWaTc">
+                        <field name="NOTIFICATION_TYPE">error</field>
+                        <field name="NOTIFICATION_SOUND">announcement</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="({siOJY|Cg+*Vnf$NoCs">
+                            <field name="TEXT">Worm Head Bot Moving Touch #091225</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id="O*@58sDc=!cOO}*b2vf9">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="smartrisk_query" id=":CR_{25*K9{Ds`k@Jyp@" collapsed="true">
+            <field name="SMARTRISK_LIST">stake</field>
+            <field name="SMARTRISK_VAR">rE`16L#qddwBm.vYCV2)</field>
+          </block>
+        </value>
+        <value name="BARRIEROFFSET">
+          <shadow type="math_number" id="YM1#OUMK|.D@:rK2fnAf">
+            <field name="NUM">0.11</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="0" y="1082">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="variables_set" id="7GJIV)Wftb4]p64gp`Hj">
+        <field name="VAR" id="Vm7W~xGfDen)53h^wmao" variabletype="">Moving</field>
+        <value name="VALUE">
+          <block type="sma" id="_X8K![}YW0ZF8B,)X)VU">
+            <field name="OUTPUT">NUMBER</field>
+            <value name="INPUT">
+              <block type="ticks" id="vmdtb1:4O3koMTBmW4OA"></block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="16Xde4oM~i5-I7Kt{Q40">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="#a0(GYF0Uk$Q407t}e%7">
+            <field name="VAR" id="?aJ!3UMhJibEQ^56qxO|" variabletype="">wormHead</field>
+            <value name="VALUE">
+              <block type="procedures_callreturn" id="2@u3A]f:Z7=yh^?sH_}?">
+                <mutation name="@Block Color Indicator Worm List (BCIWL)">
+                  <arg name="@lasaidhari (BCIWL) ticks list"></arg>
+                  <arg name="@lasaidhari (BCIWL) number of worm color lists"></arg>
+                  <arg name="@lasaidhari (BCIWL) periode"></arg>
+                </mutation>
+                <value name="ARG0">
+                  <block type="ticks" id="/EZi[w_#N=HEn:[z}Xtt"></block>
+                </value>
+                <value name="ARG1">
+                  <block type="variables_get" id="pCH{dqGy76M+%q!{{G`N">
+                    <field name="VAR" id="7zSxHcaXA~0!.@y,:s`;" variabletype="">Number of blue worm Head</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block type="math_number" id="n6O0:+lK81^F/bNVu%Q]">
+                    <field name="NUM">20</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="vzCtBc{$3ZU_9by`%FwG">
+                <field name="NOTIFICATION_TYPE">info</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="HGK0FAfiWn/iM7rF#B,_">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="iVUIlbnfO%W07T?d(nr=">
+                    <mutation items="4"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="|=uE^p~@ivUbK,20O5z(">
+                        <field name="TEXT">Worm Head: </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get" id="E^FfVD,}@P_N(Y(j38|O">
+                        <field name="VAR" id="?aJ!3UMhJibEQ^56qxO|" variabletype="">wormHead</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="^(eb{DY_?O/v-m;MLSz5">
+                        <field name="TEXT"> || MA: </field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="variables_get" id="*^f^k#D}h)k^2rT=D{;t">
+                        <field name="VAR" id="Vm7W~xGfDen)53h^wmao" variabletype="">Moving</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="0zymx`PzN;LTU?72j+`V">
+                    <value name="IF0">
+                      <block type="logic_compare" id="M9IXpoEMQnvIfNif$T$%">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="j9C?nP[R_Eq^WMF:az[5">
+                            <field name="VAR" id="?aJ!3UMhJibEQ^56qxO|" variabletype="">wormHead</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="cC)H5tWLtdI3:DL[`Pf#">
+                            <field name="VAR" id="2gnrU:9Yj*vRD?R.p(2W" variabletype="">Worm Pattern</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_if" id="RYNc$Eep=,HxTrzOZoq]">
+                        <value name="IF0">
+                          <block type="logic_compare" id="1V$)VM#oqsynX7vj/4;h">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="tick" id="YQ-EG+uSN#AN+{``cC8/"></block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="3C6,.skjlz)pz0XEwDCS">
+                                <field name="VAR" id="Vm7W~xGfDen)53h^wmao" variabletype="">Moving</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_if" id="jCyPeHNIq.~8+;H=z%[i">
+                            <value name="IF0">
+                              <block type="check_direction" id="RN_O.7dbRPv]6;#1aN.k">
+                                <field name="CHECK_DIRECTION">fall</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="purchase" id="9K819x-qRNm!.5:HkUZO">
+                                <field name="PURCHASE_LIST">ONETOUCH</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="9{Sp|/nL#%/;0]qe.H9;" collapsed="true" x="0" y="1714">
+    <mutation>
+      <arg name="@lasaidhari (BCIWL) ticks list" varid="?Wu~|-n04FYd@s90T-(."></arg>
+      <arg name="@lasaidhari (BCIWL) number of worm color lists" varid="eGXi,GJPe5N,Ri_kDh/H"></arg>
+      <arg name="@lasaidhari (BCIWL) periode" varid="++|c3BaHq?OUvlZV6Azb"></arg>
+    </mutation>
+    <field name="NAME">@Block Color Indicator Worm List (BCIWL)</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="math_change" id="gPiBy7Dh0shzX[D(m@{@">
+        <field name="VAR" id="UxlP+ljK9q$OmwzMkfTq" variabletype="">(BCIWL)▼▲</field>
+        <value name="DELTA">
+          <shadow type="math_number" id="G~_X#-+D*Fgj+%f1yh_F">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_if" id="(0+JTuZpl)ZI5x8Osh|`">
+            <value name="IF0">
+              <block type="logic_compare" id="+TP`P.!_OO20.N[3Ekf3">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="[)s~3JN|FQ15Hp/Sr[[/">
+                    <field name="VAR" id="UxlP+ljK9q$OmwzMkfTq" variabletype="">(BCIWL)▼▲</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="4eY[To5VH1XME{(d/!rr">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="Q!44itrjB7ofSK3(Y+^f">
+                <field name="VAR" id="+M}Q08TlZmDUu]!FUn:^" variabletype="">(BCIWL)▲</field>
+                <value name="VALUE">
+                  <block type="lists_getIndex" id="Qa[c+MD:{l*S1PTrJ)3i">
+                    <mutation statement="false" at="true"></mutation>
+                    <field name="MODE">GET</field>
+                    <field name="WHERE">FROM_END</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="D,G-$p+zgWI0!?Wq@4T2">
+                        <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                      </block>
+                    </value>
+                    <value name="AT">
+                      <block type="math_number" id="y`w%C3I5]C596Cn^*8hc">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id=";%}htCu[G@)n!JJhFtF$">
+                    <field name="VAR" id=":GH^!qG.?`smv-L90@L7" variabletype="">(BCIWL)▼</field>
+                    <value name="VALUE">
+                      <block type="lists_getIndex" id="%cdDHRon!/rChgOK3fzS">
+                        <mutation statement="false" at="true"></mutation>
+                        <field name="MODE">GET</field>
+                        <field name="WHERE">FROM_END</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="xo:;4ylpH!.:$H)vnzp%">
+                            <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                          </block>
+                        </value>
+                        <value name="AT">
+                          <block type="math_number" id="^-wY=E,)jYpgz,KJdMHb">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="variables_set" id="eK,0|[Tv=q?f8e%8dNVB">
+                <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                <value name="VALUE">
+                  <block type="lists_create_with" id="/Zm;F.~LhqMrhei9?Wa#">
+                    <mutation items="0"></mutation>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_for" id="0M1)bx6`bC{1/XZT#;Ho">
+                    <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                    <value name="FROM">
+                      <block type="math_number" id="JJWerWLb!d|`T~.#EMJx">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="variables_get" id="48i@);UHG6CosRbW,,W[">
+                        <field name="VAR" id="eGXi,GJPe5N,Ri_kDh/H" variabletype="">@lasaidhari (BCIWL) number of worm color lists</field>
+                      </block>
+                    </value>
+                    <value name="BY">
+                      <block type="math_number" id="5lRs9ibsoBzVzx:y1tX~">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="lists_setIndex" id="H/Y`WDq3S^w:8t5%E#;e">
+                        <mutation at="false"></mutation>
+                        <field name="MODE">INSERT</field>
+                        <field name="WHERE">FIRST</field>
+                        <value name="LIST">
+                          <block type="variables_get" id=":q=`:q;nx7:V?=g)cs$`">
+                            <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="logic_ternary" id="hdl^np#jw|O!-}B{U:7e">
+                            <value name="IF">
+                              <block type="logic_compare" id="v[mXs6jY^PcJZRL?OP`z" inline="false">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="lists_getIndex" id="w$GUYt^Y;4cern^,4T9@">
+                                    <mutation statement="false" at="true"></mutation>
+                                    <field name="MODE">GET</field>
+                                    <field name="WHERE">FROM_END</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="Xr3CDd$$))@s409Mmk43">
+                                        <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                      </block>
+                                    </value>
+                                    <value name="AT">
+                                      <block type="variables_get" id="];KN~nS^S:yfhPw#v{L`">
+                                        <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_single" id=")(a%,gml9$JQ#-It:E3~">
+                                    <field name="OP">ABS</field>
+                                    <value name="NUM">
+                                      <shadow type="math_number" id="*=s)lH1a,r9R?ZnQOU.v">
+                                        <field name="NUM">9</field>
+                                      </shadow>
+                                      <block type="math_on_list" id="_T9lLb|0m414tE/~%cL#">
+                                        <mutation op="MAX"></mutation>
+                                        <field name="OP">MAX</field>
+                                        <value name="LIST">
+                                          <block type="lists_getSublist" id=".4J0qF:W)QrIqN@ABlV8" inline="false">
+                                            <mutation at1="true" at2="true"></mutation>
+                                            <field name="WHERE1">FROM_END</field>
+                                            <field name="WHERE2">FROM_END</field>
+                                            <value name="LIST">
+                                              <block type="variables_get" id="*MrLOH?u5DF|eQRdu0AZ">
+                                                <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                              </block>
+                                            </value>
+                                            <value name="AT1">
+                                              <block type="math_arithmetic" id="y:XTj`i{~U@uVu_F(Dsa">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id=";IyuMmwAqo;M!Uf|!Ntz">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="8+f~5Yq!Yij:RI%8bwk#">
+                                                    <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="QL_gFOkpMHT?yE-StY)M">
+                                                    <field name="NUM">10</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="D4#d.-;kcyAA|hrT[8+6">
+                                                    <field name="VAR" id="++|c3BaHq?OUvlZV6Azb" variabletype="">@lasaidhari (BCIWL) periode</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="AT2">
+                                              <block type="variables_get" id="mn3gxP;nW)(=X%S[#~Ya">
+                                                <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="THEN">
+                              <block type="text" id="+2nC#Tn6DM`[5!O-wtd?">
+                                <field name="TEXT">blue</field>
+                              </block>
+                            </value>
+                            <value name="ELSE">
+                              <block type="logic_ternary" id="6y8#S6+hwx7b=EfA|n=C">
+                                <value name="IF">
+                                  <block type="logic_compare" id="WU:!uQS4m6f;raG$uI4A" inline="false">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="lists_getIndex" id="YobK.?riA6s*VNf5Z+zY">
+                                        <mutation statement="false" at="true"></mutation>
+                                        <field name="MODE">GET</field>
+                                        <field name="WHERE">FROM_END</field>
+                                        <value name="VALUE">
+                                          <block type="variables_get" id="0.Z*i(e/|N9R]bjQdd4R">
+                                            <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                          </block>
+                                        </value>
+                                        <value name="AT">
+                                          <block type="variables_get" id="2$BNt%6O!q7aU;GE[EP)">
+                                            <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_single" id="2OY5{jSL9YkIhE%lj=,X">
+                                        <field name="OP">ABS</field>
+                                        <value name="NUM">
+                                          <shadow type="math_number" id="*=s)lH1a,r9R?ZnQOU.v">
+                                            <field name="NUM">9</field>
+                                          </shadow>
+                                          <block type="math_on_list" id="~ylTJOViCA#pd1Brk1a(">
+                                            <mutation op="MIN"></mutation>
+                                            <field name="OP">MIN</field>
+                                            <value name="LIST">
+                                              <block type="lists_getSublist" id="I]1||BnKPLH]-6#_WdqX" inline="false">
+                                                <mutation at1="true" at2="true"></mutation>
+                                                <field name="WHERE1">FROM_END</field>
+                                                <field name="WHERE2">FROM_END</field>
+                                                <value name="LIST">
+                                                  <block type="variables_get" id="q(gtW1H.3HAo5a||X7hN">
+                                                    <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                                  </block>
+                                                </value>
+                                                <value name="AT1">
+                                                  <block type="math_arithmetic" id=",p4[|,}iKXMMpPf9H@}u">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id=";IyuMmwAqo;M!Uf|!Ntz">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="5(irlh(f-[i,nKXBwVnB">
+                                                        <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="GKWXJKWRB}}Qs;I]v`yn">
+                                                        <field name="NUM">10</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="jk2AT#4!eLafjZIX;+`/">
+                                                        <field name="VAR" id="++|c3BaHq?OUvlZV6Azb" variabletype="">@lasaidhari (BCIWL) periode</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="AT2">
+                                                  <block type="variables_get" id="%FO-:PUKT]*DOcH$ddW/">
+                                                    <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="THEN">
+                                  <block type="text" id="*dMl4oT~O=@bNFIsvfqG">
+                                    <field name="TEXT">red</field>
+                                  </block>
+                                </value>
+                                <value name="ELSE">
+                                  <block type="logic_ternary" id="}TP4NAsmy2$1d^*S}U[}">
+                                    <value name="IF">
+                                      <block type="logic_operation" id="k;rpY@Mg)}OlK}{h)T9{" inline="false">
+                                        <field name="OP">AND</field>
+                                        <value name="A">
+                                          <block type="logic_compare" id="-:e8]2{l%O}~xM^`+_Gp">
+                                            <field name="OP">LT</field>
+                                            <value name="A">
+                                              <block type="lists_getIndex" id="^VR#!{hRgZ7hJ7b^MYlN">
+                                                <mutation statement="false" at="true"></mutation>
+                                                <field name="MODE">GET</field>
+                                                <field name="WHERE">FROM_END</field>
+                                                <value name="VALUE">
+                                                  <block type="variables_get" id="fU_heAkF`?`.81oXW8Ai">
+                                                    <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                                  </block>
+                                                </value>
+                                                <value name="AT">
+                                                  <block type="variables_get" id="x~8)=*1@Mq:@u:OlBqF~">
+                                                    <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="variables_get" id="]{M)7lvW6,LPsiI9aV^@">
+                                                <field name="VAR" id="+M}Q08TlZmDUu]!FUn:^" variabletype="">(BCIWL)▲</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="variables_get" id="yEn1ZbsEnUs5|^fRcUb;">
+                                            <field name="VAR" id=":C95_Wl.:5(Y3uqWj.F9" variabletype="">@lasaidhari (BCIWL)</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="THEN">
+                                      <block type="text" id="cre(9-@0E*hj@fcF{6HB">
+                                        <field name="TEXT">⇘</field>
+                                      </block>
+                                    </value>
+                                    <value name="ELSE">
+                                      <block type="logic_ternary" id="{Ag~76yVY_?9mP0y=vf.">
+                                        <value name="IF">
+                                          <block type="logic_compare" id="}Nz46#+)~il(cGaP--Yk">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="lists_getIndex" id="oqPNplJA]OhEl,ANY)T@">
+                                                <mutation statement="false" at="true"></mutation>
+                                                <field name="MODE">GET</field>
+                                                <field name="WHERE">FROM_END</field>
+                                                <value name="VALUE">
+                                                  <block type="variables_get" id="ev4qi4DK.USk3u#nCqlK">
+                                                    <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                                  </block>
+                                                </value>
+                                                <value name="AT">
+                                                  <block type="variables_get" id="(|}6V]zpjJJu_:jRp~T9">
+                                                    <field name="VAR" id="o?HNaQ1gA`O2=b7aOumB" variabletype="">@lasaidhari (BCIWL) count worm color</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="variables_get" id="Q+a8U;Kb^Ld=]1GgXS=X">
+                                                <field name="VAR" id=":GH^!qG.?`smv-L90@L7" variabletype="">(BCIWL)▼</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="THEN">
+                                          <block type="text" id="7ES`0NXl0OZRU.p4?Y61">
+                                            <field name="TEXT">⇗</field>
+                                          </block>
+                                        </value>
+                                        <value name="ELSE">
+                                          <block type="variables_get" id="?sWj{_BT|Ch;ySVOOoYn">
+                                            <field name="VAR" id="Sao-/Yb2=_1LT-._#,24" variabletype="">(BCIWL)⇗⇘</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="4qTa.cDdt./%iVCM|ozW">
+                        <mutation elseif="2"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="Uib`OD9txZ[GI#lN{L2G">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="lists_getIndex" id="?Hi{E/$.OoS6$+(.LFvY">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_END</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="knkEkjx=tF$=P({$J1e)">
+                                    <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_number" id="Z/Z=x{MgGdxjn.hHUaDw">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="FO,~B}jWL`7zkRMH,u=f">
+                                <field name="TEXT"> blue</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="PFul~CFFc`4x_{/UNNyS">
+                            <field name="VAR" id="+M}Q08TlZmDUu]!FUn:^" variabletype="">(BCIWL)▲</field>
+                            <value name="VALUE">
+                              <block type="lists_getIndex" id="Pq@0x@OS(@lIplu$rbhi">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_END</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="qnhRfIhnasd3GPE.3qgS">
+                                    <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_number" id="+2C,m!d7GXi[^M^W|@tT">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="PH9m0SshB,*qP6%8d%W_">
+                                <field name="VAR" id=":C95_Wl.:5(Y3uqWj.F9" variabletype="">@lasaidhari (BCIWL)</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="?T?B$R_d^Yk:H`p$!}i9">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="IF1">
+                          <block type="logic_compare" id="Y_35nv9jEMzCS.8PJQS3">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="lists_getIndex" id="Q|F+NxTy{ueK:]$/D-YR">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_END</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="^(+CXVIRmtFf6[L%gG6e">
+                                    <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_number" id="~b{^,S?l/KE4}/@byU^]">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="2]eBq53b_?])kAM+ZjYn">
+                                <field name="TEXT">red</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="variables_set" id="+U3}vG(ag49?GGHjH9$*">
+                            <field name="VAR" id=":GH^!qG.?`smv-L90@L7" variabletype="">(BCIWL)▼</field>
+                            <value name="VALUE">
+                              <block type="lists_getIndex" id="B:6;)`,Xm|9=`|scq90S">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_END</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="JuyCG!}#0)5DXIaX00.y">
+                                    <field name="VAR" id="?Wu~|-n04FYd@s90T-(." variabletype="">@lasaidhari (BCIWL) ticks list</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_number" id="]CvjIeD$#}18h@k{$VYd">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="roqBU$_Dvt-tr;@RqE2l">
+                                <field name="VAR" id=":C95_Wl.:5(Y3uqWj.F9" variabletype="">@lasaidhari (BCIWL)</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="IM33GXA=v86U:8kAz1Lk">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="IF2">
+                          <block type="logic_operation" id="{XHV}oU!eoJy602b$6q}" inline="false">
+                            <field name="OP">OR</field>
+                            <value name="A">
+                              <block type="logic_compare" id="%roKsMeW,:ck$|gZARLq">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="lists_getIndex" id="{fyqA%!qubW4*o|-e7$e">
+                                    <mutation statement="false" at="true"></mutation>
+                                    <field name="MODE">GET</field>
+                                    <field name="WHERE">FROM_END</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="M|zTMBGAjX-6YSR9aw0V">
+                                        <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                                      </block>
+                                    </value>
+                                    <value name="AT">
+                                      <block type="math_number" id="G3tw2+QrDZ-}GtE#~/Yi">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text" id="I}E?uUGvbSJ?vTxC.tSC">
+                                    <field name="TEXT">⇘</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_compare" id="6/QXEU@*idz4p?y@zZh1">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="lists_getIndex" id="u@7CGBP6F0m4-f];IbfB">
+                                    <mutation statement="false" at="true"></mutation>
+                                    <field name="MODE">GET</field>
+                                    <field name="WHERE">FROM_END</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="^)L@b==3g(U:CkFt3#jW">
+                                        <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                                      </block>
+                                    </value>
+                                    <value name="AT">
+                                      <block type="math_number" id=")[uk%w1?.b.XtADe$dB/">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text" id="Cv^cCljw!l5S!k.2!CeY">
+                                    <field name="TEXT">⇗</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO2">
+                          <block type="variables_set" id="*.cFM.%#1Tv8@A}%lR=B">
+                            <field name="VAR" id="Sao-/Yb2=_1LT-._#,24" variabletype="">(BCIWL)⇗⇘</field>
+                            <value name="VALUE">
+                              <block type="lists_getIndex" id="N(+=ZFqR%Q@uR.`D+lsl">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_END</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="A0h3y{5Vk`5@WKVpcmOr">
+                                    <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_number" id="V!_mhrBALNXxPViO~Kyv">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="C9Ip_PhnWA`q~[Z@lNq_">
+        <field name="VAR" id="-96|(TRiob2n}hNjaiSg" variabletype="">@lasaidhari (BCIWL) worm color</field>
+      </block>
+    </value>
+  </block>
+  <block type="after_purchase" id="Vt,CkLeK8E?%BmnB`~M)" collapsed="true" x="0" y="1767">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="controls_if" id="xg3@wBznYgT.4zO=C3e^" collapsed="true">
+        <value name="IF0">
+          <block type="main_account" id="K!Qw[Lb+RnAG=b,mK~*g"></block>
+        </value>
+        <statement name="DO0">
+          <block type="notify" id="V#q2WH~}/!*$5i2$N?eC" collapsed="true">
+            <field name="NOTIFICATION_TYPE">warn</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="|w?Trga@#,SC~~jT8?E/">
+                <field name="TEXT">GRIYA LAB BOT BINARY TOOLS</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="smartrisk_result" id="r)aaMrPP~{#1A%9R;?Gy">
+                <field name="SMARTRISK_VAR">rE`16L#qddwBm.vYCV2)</field>
+                <value name="SMARTRISKFIELD_TOLERANCE">
+                  <shadow type="math_number" id="Qt_$Dl0mrU=,YCbN?]^-">
+                    <field name="NUM">0.1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="3GQWn,!6bMJ]3C@)U.B6">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="contract_check_result" id="PYD%[A;:B%|,_2t35?$k">
+                        <field name="CHECK_RESULT">win</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="notify" id="BVTnz,VV@6.m66`3G$@4">
+                        <field name="NOTIFICATION_TYPE">success</field>
+                        <field name="NOTIFICATION_SOUND">earned-money</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="FJ_ML1fAQ4qj_5:g}BLt">
+                            <field name="TEXT">WIN</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="V9dj4`A3u%(K{JGClCK;">
+                            <field name="VAR" id="F:/pHbZ`OV|?dly2(@~0" variabletype="">111</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="%r#,(Eb/?aOeL5I17~]2">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="notify" id=".Z-zXE$#P+calUQdTLZx">
+                        <field name="NOTIFICATION_TYPE">success</field>
+                        <field name="NOTIFICATION_SOUND">silent</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="gzHv;b72,+W%HZbzE3PT">
+                            <field name="TEXT">LOSS</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="YkcFi}1V%5D%N/.3/wo`">
+                            <field name="VAR" id="F:/pHbZ`OV|?dly2(@~0" variabletype="">111</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="1IF0r.9e,8(Bx}owinv~">
+                                <field name="NUM">9</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="notify" id="0Jg98Uj$hw!UXd4M3QAe">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="G]PO[ko^_Yy*uFsM;SG+">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="s1v:B}C!-Ig@E!)N5K_a">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="!HqxWQOCCNL-ud6RLG.A">
+                    <field name="TEXT">TOTAL PROFIT $: </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="total_profit" id="M#=HLpjMew@;EeIfT4@@"></block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="`fD7!3n#{~~-0S.9%*Z9">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="smartrisk_query" id="kJm!Ief}D#u6$*h=6yo0">
+                    <field name="SMARTRISK_LIST">continueTrade</field>
+                    <field name="SMARTRISK_VAR">rE`16L#qddwBm.vYCV2)</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="trade_again" id="w_SbFwa`YMS/EEDA_EAh"></block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id=")Tv|QEP)poN8zcQTiP_,">
+                    <value name="TEXT">
+                      <shadow type="text" id="L5XGrUW_U7kDPRN}IWD*">
+                        <field name="TEXT">Perda Máxima atingida! Volte a operar em outro horário...</field>
+                      </shadow>
+                      <block type="text_join" id=",b]?{7{LSEI(zqfmeXsm">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="F,dY/c`FlIfUL`-x6i$$">
+                            <field name="TEXT">DONE.., CHECK RESULT $$$$: </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="total_profit" id="5w^$#S-[2/JB%Vrztw$f"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="tick_analysis" id="LRQTw=)6ZF]?}i1?Y4t~" collapsed="true" x="0" y="1820">
+    <statement name="TICKANALYSIS_STACK">
+      <block type="notify" id="gS!+9^*W#rD~d^`-yl#l">
+        <field name="NOTIFICATION_TYPE">error</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="k?VfyMm|{k6W^HDk;oNZ">
+            <field name="TEXT">Cross UP</field>
+          </shadow>
+          <block type="text_join" id="qwozNd=Alng3vh8r++w0">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="Iss=_7P+C~C@Qq^XCu*I">
+                <field name="TEXT">WormHead  </field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="variables_get" id="QbuXymF8m!_{77@7rF)9">
+                <field name="VAR" id="?aJ!3UMhJibEQ^56qxO|" variabletype="">wormHead</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
